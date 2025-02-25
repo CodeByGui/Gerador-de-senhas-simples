@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4f4;
+  padding: 10px;
+}
+
+.DivPai {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background: white;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 10px;
+}
+
+.Resposta {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  width: 100%;
+}
+
+#Input-Texto {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.Label-Texto {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.Config {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #333;
+}
+
+input[type="checkbox"] + label::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+
+input[type="checkbox"]:checked + label::before {
+  background-color: #4caf50;
+  border-color: #4caf50;
+}
+
+#slider {
+  width: 100%;
+  cursor: pointer;
+}
+
+output {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+#Gerar-Senha {
+  padding: 12px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  width: 100%;
+  text-align: center;
+}
+
+#Gerar-Senha:hover {
+  background-color: #45a049;
+}
+
+#Gerar-Senha:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 5px;
+  }
+
+  .DivPai {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  #Input-Texto {
+    font-size: 14px;
+  }
+
+  #Gerar-Senha {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .Config {
+    gap: 8px;
+  }
+
+  input[type="checkbox"] + label {
+    font-size: 12px;
+  }
+}

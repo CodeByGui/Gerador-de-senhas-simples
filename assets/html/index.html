@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+    <div class="DivPai">
+      <div class="Resposta">
+        <input type="text" name="Input-Texto" id="Input-Texto" disabled />
+        <label class="Label-Texto" for="Input-Texto">Senha:</label>
+      </div>
+      <div class="Config">
+        <input
+          type="checkbox"
+          name="Letras-Maiusculas"
+          id="Letras-Maiusculas"
+        />
+        <label for="Letras-Maiusculas">Letras Maiusculas</label>
+        <input type="checkbox" name="Numeros" id="Numeros" />
+        <label for="Numeros">Numeros</label>
+        <input
+          type="checkbox"
+          name="Caracteres-Especiais"
+          id="Caracteres-Especiais"
+        />
+        <label for="Caracteres-Especiais">Caracteres Especiais</label>
+        <input type="range" name="slider" id="slider" min="8" max="30" value="8" oninput="output.value = slider.value">
+        <output id="output">8</output>
+        <button id="Gerar-Senha">Gerar Senha</button>
+      </div>
+    </div>
+  </body>
+  <script src="../../dist/index.js"></script>
+</html>
